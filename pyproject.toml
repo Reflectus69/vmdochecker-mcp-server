@@ -1,0 +1,17 @@
+[project]
+name = "diploma"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "libvirt-python>=11.2.0",
+    "lxml>=5.3.2",
+    "mcp[cli]>=1.6.0",
+    "uvicorn>=0.34.1",
+]
+
+[tool.hatch.build]
+include = [
+    "src/libvirt/schemas/*.rng", # Включаем все .rng файлы из директории schemas
+]
